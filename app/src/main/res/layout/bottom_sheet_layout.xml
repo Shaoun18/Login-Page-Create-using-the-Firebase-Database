@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        app:cardBackgroundColor="@color/teal_700"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/addExpenselayout"
+        android:padding="24px"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="10dp"
+        android:layout_margin="8dp"
+        app:behavior_peekHeight = "16dp"
+        app:behavior_hideable = "true"
+        app:layout_behavior = "@string/bottom_sheet_behavior">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="386dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="tittle" />
+
+            <EditText
+                android:id="@+id/amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="amount" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Do you have a memo?"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gallerBTN"
+                android:text="Select from gallery"
+                style="@android:style/Widget.Material.Button.Borderless"
+                android:textColor="@color/black"/>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/memoImage"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher"/>
+
+            <Button
+                android:id="@+id/saveBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="save"></Button>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+</layout>

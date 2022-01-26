@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/expenceListFragment">
+
+    <fragment
+        android:id="@+id/expenceListFragment"
+        android:name="com.seip.firebaseapp.ui.ExpenceListFragment"
+        android:label="fragment_expence_list"
+        tools:layout="@layout/fragment_expence_list" >
+        <action
+            android:id="@+id/login_action"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/expenceListFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.seip.firebaseapp.ui.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_expenceListFragment"
+            app:destination="@id/expenceListFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/expenselistdeatilsFragment"
+        android:name="com.seip.firebaseapp.ui.expenselistdeatilsFragment"
+        android:label="fragment_expenselistdeatils"
+        tools:layout="@layout/fragment_expenselistdeatils" />
+</navigation>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.LoginFragment">
+
+        <EditText
+            android:id="@+id/namesp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Enter Email"
+            android:inputType="textPersonName"
+            android:textSize="20sp"
+            android:drawableLeft="@android:drawable/ic_dialog_email"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/Passwordsp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/namesp"
+            android:layout_centerInParent="true"
+            android:ems="10"
+            android:hint="Enter Password"
+            android:inputType="textPassword"
+            android:drawableLeft="@android:drawable/ic_lock_idle_lock"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/loginbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Passwordsp"
+            android:layout_centerInParent="true"
+            android:text="Login" />
+
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/loginbtn"
+            android:layout_centerInParent="true">
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="New User?"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/registarsp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Registar" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/errMSG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll"
+            android:layout_centerInParent="true"
+            android:text="TextView"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</layout>
